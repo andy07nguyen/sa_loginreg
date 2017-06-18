@@ -1,0 +1,23 @@
+* body {
+  margin: 0;
+  padding: 0;
+  background-color: #acd8ed;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  top: 70px;
+  z-index: 1;
+}
+
+form.loginRegApp {
+  position: relative;
+  display: block;
+  width: 35%;
+  top: 5px;
+  left: 33%;
+  background-color: #f7f7f9;
+  border-radius: 5%;
+  padding: 70px 50px 50px 50px;
+}

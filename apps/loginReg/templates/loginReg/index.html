@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sign Up</title>
+<!-- DJANGO'S TEMPPLETE & STATIC FILES FORMAT -->
+      {% load staticfiles %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+        <!-- <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}" media="screen" title="no title"  charset="utf-8"> -->
+<!-- BOOSTRAP CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'loginReg/bootstrap/dist/css/bootstrap.css' %}"media="screen" title="no title"  charset="utf-8">
+<!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'loginReg/css/main.css' %}">
+  </head>
+  <body>
+    <div class="container">
+<!-- LOGIN & REGISTRATION APP-->
+      <h2>Sign Up</h2>
+      <form class="loginRegApp" action="/process" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">First Name:</label>
+          <input type="name" class="form-control" name="fname" placeholder="Type in first name">
+        </div>
+        <div class="form-group">
+          <label for="name">Last Name:</label>
+          <input type="name" class="form-control" name="lname" placeholder="Type in last name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" class="form-control" name="email" placeholder="Type in email address">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" name="password" placeholder="Type in password">
+        </div>
+        <div class="form-group">
+          <label for="password">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPw" placeholder="Type in password">
+        </div>
+        <!-- <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div> -->
+        <button type="submit" class="btn btn-default" name="submit">Register</button>
+        <button type="submit" href="/" method="get" class="btn btn-default">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>
